@@ -1,0 +1,15 @@
+# Vite / Node projects
+node_modules
+dist
+*.log
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Environment files
+.env
+.env.local
+.env.*.local
