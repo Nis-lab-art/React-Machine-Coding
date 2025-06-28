@@ -1,0 +1,91 @@
+:root {
+  --accent: #4f46e5;
+  --bg: #fff;
+  --bg-hover: #f9fafb;
+  --border: #e5e7eb;
+  --text: #111827;
+  --speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* ───────── Accordion Shell ───────── */
+
+.accordion {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background var(--speed), border-left var(--speed);
+}
+
+.accordion:hover {
+  background: var(--bg-hover);
+}
+
+.accordion.active {
+  background: var(--bg-hover);
+  border-left: 4px solid var(--accent);
+}
+
+/* ───────── Header & Icon ───────── */
+
+.accordion label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.accordion-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+  transition: transform var(--speed);
+}
+
+/* rotate the arrow when open */
+.accordion.active .accordion-icon {
+  transform: rotate(-135deg);
+}
+
+/* ───────── Content ───────── */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height var(--speed), padding var(--speed);
+}
+
+/* expand the content when open */
+.accordion.active .accordion-content {
+  max-height: 200px; /* or something large; adjust to your content size */
+  padding: 1rem;
+}

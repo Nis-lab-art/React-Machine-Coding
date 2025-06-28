@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.light-container {
+  width: 120px;
+  height: 400px;
+  background: #111;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.light {
+  --size: 80px;
+  width: var(--size);
+  height: var(--size);
+  background-color: #555;
+  border-radius: var(--size);
+}
