@@ -1,0 +1,40 @@
+body {
+  font-family: monospace;
+}
+
+.container {
+  max-width: calc(3 * 100px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.status {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.reset-btn {
+  padding: 5px 10px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.cells {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #cccccc;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
